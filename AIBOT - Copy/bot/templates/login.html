@@ -1,0 +1,38 @@
+{% extends "base.html" %} {% block title %}<title>Login page</title>{% endblock %} 
+{% block loginalert %}{% endblock %} 
+{% block login %}
+<div class="container vh-100 d-flex justify-content-center align-items-center">
+  <div class="card shadow p-4" style="width: 350px">
+    <h3 class="text-center mb-4">Login</h3>
+    <form method='POST'>
+      <!-- Name -->
+      <div class="mb-3">
+        <label for="email" class="form-label">Email</label>
+        <input
+          type="email"
+          class="form-control"
+          name='email'
+          id="email"
+          placeholder="Enter your email"
+           />
+      </div>
+      <!-- Password -->
+      <div class="mb-3">
+        <label for="password" class="form-label">Password</label>
+        <input
+          type="password"
+          class="form-control"
+          name='password'
+          id="password"
+          placeholder="Enter your password"
+          />
+      </div>
+      <!-- Login Button -->
+      <button type="submit" class="btn btn-primary w-100">Login</button>
+    </form>
+     <p class="text-center mt-3 mb-0">
+      Create Account <a href="/signup">Signup</a>
+    </p>
+  </div>
+</div>
+{% endblock %}

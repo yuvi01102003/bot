@@ -1,0 +1,39 @@
+{% extends "base.html" %} {% block title %}<title>Home page</title>{% endblock
+%} {% block chatbot %}
+<div class="container py-5">
+  <!-- Chat Window -->
+  <div class="card shadow">
+    <div class="card-header bg-primary text-white">
+      <h5 class="mb-0">AI Chatbot</h5>
+    </div>
+    <div class="card-body" style="height: 400px; overflow-y: auto">
+      <!-- Example Messages -->
+      {% for chat in user.chats %}
+      <div class="mb-3 text-end">
+        <div class="p-2 bg-primary text-white rounded w-75 ms-auto">
+           {{chat.userip}}
+        </div>
+      </div>
+      <div class="mb-3">
+        <div class="p-2 bg-light border rounded w-75">
+          {{chat.aiop}} 
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+    <!-- Input Area -->
+    <div class="card-footer bg-white">
+      <div class="input-group">
+        <form method="POST">
+        <textarea
+          class="form-control"
+          name='userinput'
+          rows="1"
+          placeholder="Type your message..."></textarea>
+        <button type='submit' class="btn btn-primary">Send</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}

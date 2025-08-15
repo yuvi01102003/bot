@@ -1,0 +1,82 @@
+{% extends "base.html" %}
+{% block title %}
+<title>Signup Page</title>
+{% endblock %}
+
+{% block loginalert %}{% endblock %}
+
+{% block signup %}
+<div class="container vh-100 d-flex justify-content-center align-items-center">
+  <div class="card shadow p-4" style="width: 400px">
+    <h3 class="text-center mb-4">Sign Up</h3>
+    <form method="POST">
+      <!-- Name -->
+      <div class="mb-3">
+        <label for="name" class="form-label">Full Name</label>
+        <input
+          type="text"
+          class="form-control"
+          name="name"
+          id="name"
+          placeholder="Enter your name"
+          />
+      </div>
+
+      <!-- Email -->
+      <div class="mb-3">
+        <label for="email" class="form-label">Email address</label>
+        <input
+          type="email"
+          class="form-control"
+          name="email"
+          id="email"
+          placeholder="Enter your email"
+          />
+      </div>
+
+      <!-- Phone Number -->
+      <div class="mb-3">
+        <label for="phone" class="form-label">Phone Number</label>
+        <input
+          type="tel"
+          class="form-control"
+          name="phone"
+          id="phone"
+          placeholder="Enter your phone number"
+          />
+      </div>
+
+      <!-- Password -->
+      <div class="mb-3">
+        <label for="password" class="form-label">Password</label>
+        <input
+          type="password"
+          class="form-control"
+          name="password"
+          id="password"
+          placeholder="Enter your password"
+          />
+      </div>
+
+      <!-- Confirm Password -->
+      <div class="mb-3">
+        <label for="confirmPassword" class="form-label">Confirm Password</label>
+        <input
+          type="password"
+          class="form-control"
+          name="confirmpassword"
+          id="confirmPassword"
+          placeholder="Confirm your password"
+           />
+      </div>
+
+      <!-- Signup Button -->
+      <button type="submit" class="btn btn-primary w-100">Sign Up</button>
+    </form>
+
+    <p class="text-center mt-3 mb-0">
+      Already have an account? <a href="/login">Login</a>
+    </p>
+  </div>
+</div>
+{% endblock %}
